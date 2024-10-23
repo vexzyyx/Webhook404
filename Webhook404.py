@@ -68,8 +68,8 @@ def delete_hook():
     requests.delete(webhook)
     if not validate_webhook(webhook):
         input(f"{GREEN}Webhook deleted successfully.{WHITE}\n\n{BLUE}Press ENTER to go back to the menu...{WHITE}")
-        webhook = None  # Reset webhook to None
-        prompt_webhook()  # Prompt for a new webhook
+        webhook = None
+        prompt_webhook()
     else:
         input(f"{RED}Sorry, webhook couldn't be deleted.{WHITE}\n{BLUE}Press ENTER to go back...{WHITE}")
         menu()
